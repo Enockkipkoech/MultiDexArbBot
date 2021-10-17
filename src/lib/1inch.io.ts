@@ -7,6 +7,7 @@ export class OneInch extends Aggr {
     constructor() {
         super(`1Inch`, `https://api.1inch.exchange/v3.0/`);
     }
+     
     getQuote = async (params: { srcToken: string, toToken: string, srcAmount: number | string, side?: string }): Promise<Quote> => {
         const { srcToken, toToken, srcAmount, side } = params
         try {
